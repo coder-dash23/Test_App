@@ -80,7 +80,6 @@ const Home = () => {
       }),
     });
 
-    const data = await response.json();
     if (response.ok) {
       setMessage("Record updated successfully!");
     } else {

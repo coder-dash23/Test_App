@@ -3,10 +3,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {connection} from '@/lib/db';
 
-interface QueryParams {
-  id: string;
-}
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'DELETE') {
     const id = Array.isArray(req.query.id) ? req.query.id[0] : req.query.id;
